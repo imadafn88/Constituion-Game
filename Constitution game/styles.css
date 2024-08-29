@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #dea2a2;
+}
+
+h1 {
+    margin: 20px;
+}
+
+#message {
+    margin-top: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+#timer, #score {
+    margin: 10px;
+    font-size: 20px;
+}
+
+#swapMessage {
+    font-size: 18px;
+    margin: 10px;
+    color: red;
+    display: none;
+}
+.rules{
+    margin-left: 300px; 
+    margin-right: 300px; 
+    text-align: left;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(6, 150px);
+    gap: 15px;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+.card {
+    width: 150px;
+    height: 200px;
+    background-color: #069cc1;
+    border: 2px solid #333;
+    display: flex;
+    border-radius: 3px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+    color: transparent;
+    transition: background-color 0.5s, color 0.5s, transform 0.5s;
+    position: relative;
+}
+
+.card.flip {
+    background-color: #fff;
+    color: #333;
+}
+
+.card.match {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.card.no-match {
+    background-color: #f44336;
+}
+
+.card.zoom-out {
+    transform: scale(0.7);
+    transition: transform 2s;
+}
+
+.card.empty {
+    background-color: #ddd;
+    color: #FFC107; /* Dark Yellow */
+}
+
+.card.empty.flip {
+    background-color: #fff;
+}
